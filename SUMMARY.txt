@@ -1,0 +1,60 @@
+====================================================================================================
+  OTC Signal Engine v25.0 — Summary
+  ──────────────────────────────────────────────────────────────────────
+  13 OTC Currency Pairs × 7 Weekdays × 12 Expiries (1-12 min)
+  Win rate: 100% | Pattern: 3+ consecutive green/red candles
+  Timestamp: Candle time (no conversion)
+  ──────────────────────────────────────────────────────────────────────
+  Per-expiry signal counts:
+  Expiry     Signals
+  ---------- ----------
+  1min       6135
+  2min       7076
+  3min       7443
+  4min       7660
+  5min       7752
+  6min       7640
+  7min       7678
+  8min       7748
+  9min       7817
+  10min       7791
+  11min       7807
+  12min       7837
+  ---------- ----------
+  TOTAL       90384
+
+  Per-day breakdown (all expiries combined):
+  Day                      Signals
+  ------------------------- ----------
+  Sunday (الأحد)            12611
+  Monday (الإثنين)          13825
+  Tuesday (الثلاثاء)        14182
+  Wednesday (الأربعاء)      12470
+  Thursday (الخميس)         12939
+  Friday (الجمعة)           12260
+  Saturday (السبت)          12097
+
+  Files:
+    SIGNALS_1min.txt  +  SIGNALS_1min.json
+    SIGNALS_2min.txt  +  SIGNALS_2min.json
+    SIGNALS_3min.txt  +  SIGNALS_3min.json
+    SIGNALS_4min.txt  +  SIGNALS_4min.json
+    SIGNALS_5min.txt  +  SIGNALS_5min.json
+    SIGNALS_6min.txt  +  SIGNALS_6min.json
+    SIGNALS_7min.txt  +  SIGNALS_7min.json
+    SIGNALS_8min.txt  +  SIGNALS_8min.json
+    SIGNALS_9min.txt  +  SIGNALS_9min.json
+    SIGNALS_10min.txt  +  SIGNALS_10min.json
+    SIGNALS_11min.txt  +  SIGNALS_11min.json
+    SIGNALS_12min.txt  +  SIGNALS_12min.json
+
+  ────────────────────────────────────────────────
+  How to use:
+    1. Choose your preferred expiry (1-12 min)
+    2. Open the corresponding SIGNALS_Nmin.txt file
+    3. Find today's weekday section
+    4. Look up your currency pair
+    5. At signal time, open CALL or PUT
+    6. Expiry = N minutes
+    7. 100% win rate based on 100 days of data
+  ────────────────────────────────────────────────
