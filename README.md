@@ -1,20 +1,34 @@
 # OTC_SIGNALS_1MIN_12MIN
 
-13 OTC Currency Pairs × 7 Weekdays × 12 Expiries (1-12 min)
-100% Win Rate | Candle Timestamps | Sorted 00:00-23:59
+13 OTC Currency Pairs × 7 Weekdays × 12 Expiries
+100% Win Rate | ≥5 Samples | ≥70% Safe | Candle Timestamps
 
-## Files
+## Filters (REALISTIC)
+- Min samples: 5 (out of ~14 same-weekday days)
+- Win rate: 100% (ALL days closed same direction)
+- Safe rate: ≥70% (close far from entry)
+- Pattern: 3-6 consecutive green/red candles
 
-SIGNALS_1min.txt   — 6,135 signals
-SIGNALS_2min.txt   — 7,076 signals
-SIGNALS_3min.txt   — 7,443 signals
-SIGNALS_4min.txt   — 7,660 signals
-SIGNALS_5min.txt   — 7,752 signals
-SIGNALS_6min.txt   — 7,640 signals
-SIGNALS_7min.txt   — 7,678 signals
-SIGNALS_8min.txt   — 7,748 signals
-SIGNALS_9min.txt   — 7,817 signals
-SIGNALS_10min.txt  — 7,791 signals
-SIGNALS_11min.txt  — 7,807 signals
-SIGNALS_12min.txt  — 7,837 signals
-TOTAL: 90,384 signals
+## Files (TXT only)
+
+SIGNALS_1min.txt   — 61 signals
+SIGNALS_2min.txt   — 85 signals
+SIGNALS_3min.txt   — 110 signals
+SIGNALS_4min.txt   — 102 signals
+SIGNALS_5min.txt   — 109 signals
+SIGNALS_6min.txt   — 132 signals
+SIGNALS_7min.txt   — 126 signals
+SIGNALS_8min.txt   — 137 signals
+SIGNALS_9min.txt   — 150 signals
+SIGNALS_10min.txt  — 146 signals
+SIGNALS_11min.txt  — 148 signals
+SIGNALS_12min.txt  — 141 signals
+TOTAL: 1,447 signals
+
+## Signal Format
+
+[PAIR] HH:MM <CALL|PUT> streak=N×🟢/🔴 win=100% safe=ZZ% move=X n=N
+
+## Days (ordered Sunday → Saturday)
+Sunday (الأحد) → Monday (الإثنين) → ... → Saturday (السبت)
+Signals sorted 00:00 → 23:59 per day.
