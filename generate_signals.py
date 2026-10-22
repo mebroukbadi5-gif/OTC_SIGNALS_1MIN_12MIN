@@ -156,7 +156,7 @@ def generate_expiry_file(signals, expiry, output_dir):
     # Per-day sections
     for day in WEEKDAY_FULL:
         day_sigs = [s for s in signals if s['day'] == day]
-        day_sigs.sort(key=lambda s: (s['pair'], s['hour'], s['minute']))
+        day_sigs.sort(key=lambda s: (s['hour'], s['minute'], s['pair']))
         
         out_lines.append('')
         out_lines.append('━' * 100)
@@ -167,7 +167,14 @@ def generate_expiry_file(signals, expiry, output_dir):
             out_lines.append('  (no signals)')
             continue
         
+        # Group by hour for better readability
+        current_hour = None
         for s in day_sigs:
+            if s['hour'] != current_hour:
+                current_hour = s['hour']
+                out_lines.append('')
+                out_lines.append(f'  ── {current_hour:02d}:00 ──')
+            
             emoji = '🟢' if s['streak_color'] == 'GREEN' else '🔴'
             out_lines.append(
                 f"  ⭐⭐⭐ [{s['pair']}] {s['time']} {s['direction']:<4}  "
@@ -229,7 +236,7 @@ def main():
     for exp in EXPIRIES:
         sigs = all_by_expiry[exp]
         # Sort by day, pair, time
-        sigs.sort(key=lambda s: (WEEKDAY_FULL.index(s['day']), s['pair'], s['hour'], s['minute']))
+        sigs.sort(key=lambda s: (WEEKDAY_FULL.index(s['day']), s['hour'], s['minute'], s['pair']))
         generate_expiry_file(sigs, exp, OUTPUT_DIR)
         
         # Also save JSON
